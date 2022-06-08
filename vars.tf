@@ -1,9 +1,9 @@
 variable "environment_name" {
-  default = "eks-graviton-example"
+  default = "mixed-ng-eks"
 }
 
 variable "eks_version" {
-  default = "1.17"
+  default = "1.22"
 }
 
 variable "region" {
@@ -21,6 +21,14 @@ variable "vpc_cidr" {
 
 variable "node_pool_instance_type" {
   default = "m6g.medium"
+}
+
+variable "node_pool_instance_type_spot_arm" {
+  default = "m6g.large"
+}
+
+variable "node_pool_instance_type_spot_x86" {
+  default = "m5ad.large"
 }
 
 variable "tags" {
